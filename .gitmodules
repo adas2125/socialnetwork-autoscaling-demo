@@ -1,0 +1,9 @@
+[submodule "Autoscaling"]
+	path = Autoscaling
+	url = https://github.com/Chen-Si-An/Autoscaling.git
+[submodule "redis-foxtrot-autoscaler"]
+	path = redis-foxtrot-autoscaler
+	url = https://github.com/SatyamS17/redis-foxtrot-autoscaler.git
+[submodule "DeathStarBench"]
+	path = DeathStarBench
+	url = https://github.com/delimitrou/DeathStarBench.git

@@ -1,0 +1,232 @@
+diff --git a/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl b/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl
+index 52f499e..518efc1 100644
+--- a/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl
++++ b/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl
+@@ -2,15 +2,49 @@
+   {{ .Values.global.mongodb.sharding.svc.user }}:{{ .Values.global.mongodb.sharding.svc.password }}@{{ .Values.global.mongodb.sharding.svc.name }}
+ {{- end }}
+ 
++{{- define "mongodb-external.connection" -}}
++{{- $external := .Values.global.mongodb.external -}}
++{{- $address := required "global.mongodb.external.address is required when external MongoDB is enabled" (trim (default "" $external.address)) -}}
++{{- if not (regexMatch "^[A-Za-z0-9][A-Za-z0-9.-]*$" $address) -}}
++{{- fail "global.mongodb.external.address must be a hostname or IPv4 address, without credentials, protocol, or port" -}}
++{{- end -}}
++{{- $username := required "global.mongodb.external.username is required when external MongoDB is enabled" $external.username -}}
++{{- $password := required "global.mongodb.external.password is required when external MongoDB is enabled" $external.password -}}
++{{- printf "%s:%s@%s" ($username | urlquery | replace "+" "%20") ($password | urlquery | replace "+" "%20") $address -}}
++{{- end -}}
++
+ {{- define "memcached-cluster.connection" }}
+   {{ .Release.Name }}-mcrouter
+ {{- end }}
+ 
+-{{- define "redis-cluster.connection" }}
+-  {{ .Release.Name }}-redis-cluster
+-{{- end}}
++{{- define "redis-cluster.connection" -}}
++{{- if .Values.global.redis.cluster.external.enabled -}}
++{{ required "global.redis.cluster.external.address is required when external Redis Cluster mode is enabled" .Values.global.redis.cluster.external.address }}
++{{- else -}}
++{{ .Release.Name }}-redis-cluster
++{{- end -}}
++{{- end }}
+ 
+ {{- define "socialnetwork.templates.other.service-config.json"  }}
++{{- $externalMongoDB := .Values.global.mongodb.external | default dict -}}
++{{- $externalMongoDBEnabled := $externalMongoDB.enabled | default false -}}
++{{- if $externalMongoDBEnabled -}}
++{{- if ne $externalMongoDB.role "post-storage" -}}
++{{- fail "global.mongodb.external.role must be post-storage for this trial" -}}
++{{- end -}}
++{{- if .Values.global.mongodb.sharding.enabled -}}
++{{- fail "external MongoDB and bundled MongoDB sharding cannot both be enabled" -}}
++{{- end -}}
++{{- if or (lt (int $externalMongoDB.port) 1) (gt (int $externalMongoDB.port) 65535) -}}
++{{- fail "global.mongodb.external.port must be between 1 and 65535" -}}
++{{- end -}}
++{{- end -}}
++{{- $externalRedisClusterEnabled := .Values.global.redis.cluster.external.enabled }}
++{{- $externalRedisClusterRole := .Values.global.redis.cluster.external.role }}
++{{- $socialGraphRedisClusterEnabled := or .Values.global.redis.cluster.enabled (and $externalRedisClusterEnabled (eq $externalRedisClusterRole "social-graph")) }}
++{{- $homeTimelineRedisClusterEnabled := or .Values.global.redis.cluster.enabled (and $externalRedisClusterEnabled (eq $externalRedisClusterRole "home-timeline")) }}
++{{- $composePostRedisClusterEnabled := .Values.global.redis.cluster.enabled }}
++{{- $userTimelineRedisClusterEnabled := or .Values.global.redis.cluster.enabled (and $externalRedisClusterEnabled (eq $externalRedisClusterRole "user-timeline")) }}
+ {
+     "secret": "secret",
+     "social-graph-service": {
+@@ -28,12 +62,12 @@
+       "keepalive_ms": 10000
+     },
+     "social-graph-redis": {
+-      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "social-graph-redis" .Values.global.redis.cluster.enabled | quote}},
++      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "social-graph-redis" $socialGraphRedisClusterEnabled | quote}},
+       "port": 6379,
+       "connections": 512,
+       "timeout_ms": 10000,
+       "keepalive_ms": 10000,
+-      "use_cluster": {{ ternary 1 0 .Values.global.redis.cluster.enabled}},
++      "use_cluster": {{ ternary 1 0 $socialGraphRedisClusterEnabled}},
+       "use_replica": {{ ternary 1 0 .Values.global.redis.replication.enabled}}
+     },
+     "write-home-timeline-service": {
+@@ -52,12 +86,12 @@
+       "keepalive_ms": 10000
+     },
+     "home-timeline-redis": {
+-      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "home-timeline-redis" .Values.global.redis.cluster.enabled | quote}},
++      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "home-timeline-redis" $homeTimelineRedisClusterEnabled | quote}},
+       "port": 6379,
+       "connections": 512,
+       "timeout_ms": 10000,
+       "keepalive_ms": 10000,
+-      "use_cluster": {{ ternary 1 0 .Values.global.redis.cluster.enabled}},
++      "use_cluster": {{ ternary 1 0 $homeTimelineRedisClusterEnabled}},
+       "use_replica": {{ ternary 1 0 .Values.global.redis.replication.enabled}}
+     },
+     "compose-post-service": {
+@@ -68,12 +102,12 @@
+       "keepalive_ms": 10000
+     },
+     "compose-post-redis": {
+-      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "compose-post-redis" .Values.global.redis.cluster.enabled | quote}},
++      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "compose-post-redis" $composePostRedisClusterEnabled | quote}},
+       "port": 6379,
+       "connections": 512,
+       "timeout_ms": 10000,
+       "keepalive_ms": 10000,
+-      "use_cluster": {{ ternary 1 0 .Values.global.redis.cluster.enabled}},
++      "use_cluster": {{ ternary 1 0 $composePostRedisClusterEnabled}},
+       "use_replica": {{ ternary 1 0 .Values.global.redis.replication.enabled}}
+     },
+     "user-timeline-service": {
+@@ -91,12 +125,12 @@
+       "keepalive_ms": 10000
+     },
+     "user-timeline-redis": {
+-      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "user-timeline-redis" .Values.global.redis.cluster.enabled | quote}},
++      "addr": {{ ternary (include "redis-cluster.connection" . | trim) "user-timeline-redis" $userTimelineRedisClusterEnabled | quote}},
+       "port": 6379,
+       "connections": 512,
+       "timeout_ms": 10000,
+       "keepalive_ms": 10000,
+-      "use_cluster": {{ ternary 1 0 .Values.global.redis.cluster.enabled}},
++      "use_cluster": {{ ternary 1 0 $userTimelineRedisClusterEnabled}},
+       "use_replica": {{ ternary 1 0 .Values.global.redis.replication.enabled}}
+     },
+     "post-storage-service": {
+@@ -107,8 +141,8 @@
+       "keepalive_ms": 10000
+     },
+     "post-storage-mongodb": {
+-      "addr": {{ ternary (include "mongodb-sharded.connection" . | trim) "post-storage-mongodb" .Values.global.mongodb.sharding.enabled | quote}},
+-      "port": {{ ternary .Values.global.mongodb.sharding.svc.port 27017 .Values.global.mongodb.sharding.enabled}},
++      "addr": {{ if $externalMongoDBEnabled }}{{ include "mongodb-external.connection" . | quote }}{{ else }}{{ ternary (include "mongodb-sharded.connection" . | trim) "post-storage-mongodb" .Values.global.mongodb.sharding.enabled | quote }}{{ end }},
++      "port": {{ if $externalMongoDBEnabled }}{{ int $externalMongoDB.port }}{{ else }}{{ ternary .Values.global.mongodb.sharding.svc.port 27017 .Values.global.mongodb.sharding.enabled }}{{ end }},
+       "connections": 512,
+       "timeout_ms": 10000,
+       "keepalive_ms": 10000
+diff --git a/socialNetwork/helm-chart/socialnetwork/values.yaml b/socialNetwork/helm-chart/socialnetwork/values.yaml
+index d79935f..d381af5 100644
+--- a/socialNetwork/helm-chart/socialnetwork/values.yaml
++++ b/socialNetwork/helm-chart/socialnetwork/values.yaml
+@@ -21,6 +21,10 @@ global:
+   redis:
+     cluster:
+       enabled: false
++      external:
++        enabled: false
++        address: ""
++        role: ""
+     standalone:
+       enabled: true
+     replication:
+@@ -34,6 +38,13 @@ global:
+     standalone:
+       enabled: true
+   mongodb:
++    external:
++      enabled: false
++      role: ""
++      address: ""
++      port: 27017
++      username: ""
++      password: ""
+     standalone:
+       enabled: true
+     sharding:
+diff --git a/socialNetwork/src/HomeTimelineService/HomeTimelineHandler.h b/socialNetwork/src/HomeTimelineService/HomeTimelineHandler.h
+index ad25401..81f25aa 100644
+--- a/socialNetwork/src/HomeTimelineService/HomeTimelineHandler.h
++++ b/socialNetwork/src/HomeTimelineService/HomeTimelineHandler.h
+@@ -174,36 +174,47 @@ void HomeTimelineHandler::WriteHomeTimeline(
+     }
+     
+     else {
+-      // Create multi-pipeline that match with shards pool
+-      std::map<std::shared_ptr<ConnectionPool>, std::shared_ptr<Pipeline>> pipe_map;
+-      auto *shards_pool = _redis_cluster_client_pool->get_shards_pool();
+-
+-      for (auto &follower_id : followers_id_set) {
+-        auto conn = shards_pool->fetch(std::to_string(follower_id));
+-        auto pipe = pipe_map.find(conn);
+-        if(pipe == pipe_map.end()) {//Not found, create new pipeline and insert
+-          auto new_pipe = std::make_shared<Pipeline>(_redis_cluster_client_pool->pipeline(std::to_string(follower_id), false));
+-          pipe_map.insert(make_pair(conn, new_pipe));
+-          auto *_pipe = new_pipe.get();
+-          _pipe->zadd(std::to_string(follower_id), post_id_str, timestamp,
+-                  UpdateType::NOT_EXIST);
+-        }else{//Found, use exist pipeline
+-          std::pair<std::shared_ptr<ConnectionPool>, std::shared_ptr<Pipeline>> found = *pipe;
+-          auto *_pipe = found.second.get();
+-          _pipe->zadd(std::to_string(follower_id), post_id_str, timestamp,
+-                  UpdateType::NOT_EXIST);
+-        }
+-      }
+-      // LOG(info) <<"followers_id_set items:" << followers_id_set.size()<<"; pipeline items:" << pipe_map.size();
+       try {
++        // Create multi-pipeline that match with shards pool
++        std::map<std::shared_ptr<ConnectionPool>, std::shared_ptr<Pipeline>> pipe_map;
++        auto *shards_pool = _redis_cluster_client_pool->get_shards_pool();
++
++        for (auto &follower_id : followers_id_set) {
++          auto conn = shards_pool->fetch(std::to_string(follower_id));
++          auto pipe = pipe_map.find(conn);
++          if(pipe == pipe_map.end()) {//Not found, create new pipeline and insert
++            auto new_pipe = std::make_shared<Pipeline>(_redis_cluster_client_pool->pipeline(std::to_string(follower_id), false));
++            pipe_map.insert(make_pair(conn, new_pipe));
++            auto *_pipe = new_pipe.get();
++            _pipe->zadd(std::to_string(follower_id), post_id_str, timestamp,
++                    UpdateType::NOT_EXIST);
++          }else{//Found, use exist pipeline
++            std::pair<std::shared_ptr<ConnectionPool>, std::shared_ptr<Pipeline>> found = *pipe;
++            auto *_pipe = found.second.get();
++            _pipe->zadd(std::to_string(follower_id), post_id_str, timestamp,
++                    UpdateType::NOT_EXIST);
++          }
++        }
+         for(auto const &it : pipe_map) {
+           auto _pipe = it.second.get();
+           _pipe->exec();
+         }
+-
++      } catch (const RedirectionError &err) {
++        LOG(warning) << "Redis Cluster redirected home timeline fan-out; "
++                     << "retrying with cluster-aware commands: " << err.what();
++        // Pipelines are destroyed before retrying. NX preserves already-written members.
++        try {
++          for (const auto &follower_id : followers_id_set) {
++            _redis_cluster_client_pool->zadd(std::to_string(follower_id),
++                post_id_str, timestamp, UpdateType::NOT_EXIST);
++          }
++        } catch (const Error &retry_err) {
++          LOG(error) << retry_err.what();
++          throw;
++        }
+       } catch (const Error &err) {
+         LOG(error) << err.what();
+-        throw err;
++        throw;
+       }
+     }
+   }
