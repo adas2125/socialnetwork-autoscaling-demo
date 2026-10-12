@@ -1,0 +1,9 @@
+# Only changing external database addresses
+global:
+  redis:
+    cluster:
+      external:
+        address: redis-cluster-headless.readme-test-redis.svc.cluster.local
+  mongodb:
+    external:
+      address: sn-mongodb-sharded.readme-test-mongo.svc.cluster.local
