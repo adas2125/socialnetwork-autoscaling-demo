@@ -1,0 +1,23 @@
+image:
+  repository: bitnamilegacy/mongodb-sharded
+
+auth:
+  rootPassword: mongodb123
+
+shards: 1
+configsvr:
+  replicaCount: 3
+
+shardsvr:
+  persistence:
+    size: 16Gi
+  dataNode:
+    resources:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: '1'
+        memory: 1Gi
+    mongodbExtraFlags:
+      - --wiredTigerCacheSizeGB=0.25

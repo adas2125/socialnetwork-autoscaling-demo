@@ -1,0 +1,55 @@
+global:
+  fullnameOverride: hr-demo
+  defaultImageVersion: latest@sha256:488d8980c81eeae337d089185f2dd2643dec589809e102c2abf65a4d6e9bb436
+  nodeSelector:
+    kubernetes.io/arch: amd64
+  resources: |
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
+  services:
+    environments:
+      JAEGER_SAMPLE_RATIO: "1"
+  reservationMongo:
+    external: true
+    address: "root:mongodb123@hr-mongodb-sharded.hotel-demo-mongo.svc.cluster.local:27017/admin?authSource=admin"
+    bundledEnabled: false
+
+jaeger:
+  container:
+    imageVersion: 1.62.0
+    environments:
+      - name: MEMORY_MAX_TRACES
+        value: "10000"
+
+# The upstream image installs binaries in /go/bin and runs from /workspace.
+frontend:
+  container: {command: /go/bin/frontend}
+  configMaps: &service_config
+    - name: service-config.json
+      mountPath: /workspace/config.json
+      value: service-config
+geo:
+  container: {command: /go/bin/geo}
+  configMaps: *service_config
+profile:
+  container: {command: /go/bin/profile}
+  configMaps: *service_config
+rate:
+  container: {command: /go/bin/rate}
+  configMaps: *service_config
+recommendation:
+  container: {command: /go/bin/recommendation}
+  configMaps: *service_config
+reservation:
+  container: {command: /go/bin/reservation}
+  configMaps: *service_config
+search:
+  container: {command: /go/bin/search}
+  configMaps: *service_config
+user:
+  container: {command: /go/bin/user}
+  configMaps: *service_config
