@@ -339,7 +339,7 @@ helm --kube-context "$KUBE_CONTEXT" install hr-mongodb-sharded mongodb-sharded \
 k -n hotel-demo-mongo get pods,pvc
 ```
 
-Expect five Ready pods and four Bound PVCs. Define the MongoDB helper, then
+Define the MongoDB helper, then
 initialize the two reservation collections:
 
 ```bash
@@ -367,7 +367,6 @@ k -n hotel-demo-mongo get mongodautoscaler hotel-reservation -o json |
   jq '.spec | {bitnami, shardScaleBounds, replicaScaleBounds}'
 ```
 
-Require target `hr-mongodb-sharded` in `hotel-demo-mongo` and bounds **1..1**.
 In another **CloudLab terminal**, leave these logs running through the tests:
 
 ```bash
@@ -383,8 +382,7 @@ Expect CPU, I/O-wait, and
 
 ### 2.3 HotelReservation
 
-Back in the **main terminal**, install HotelReservation. Its values already
-include the demo MongoDB username, password, and address.
+Back in the **main terminal**, install HotelReservation. 
 
 ```bash
 helm --kube-context "$KUBE_CONTEXT" install hr-demo \
@@ -398,8 +396,7 @@ JS
 ```
 
 Expect Ready pods and **80 capacities / 80 hotels** in the demo MongoDB.
-Upstream seeds again on each reservation-service startup, so restarts can add
-duplicate seed records.
+
 
 ## 3. UIs
 
@@ -411,8 +408,7 @@ HR_JAEGER_FORWARD_PID=$!
 k -n monitoring port-forward service/prometheus-operated 19090:9090 &
 HR_PROM_FORWARD_PID=$!
 ```
-
-Wait for both commands to show `Forwarding from`. In a **local terminal**, open the
+In a **local terminal** (e.g. I was running on CloudLab), open the
 SSH tunnel (skip if this tunnel is already running):
 
 ```bash
@@ -455,7 +451,6 @@ printjson({documents: c.countDocuments({}),
 JS
 ```
 
-If readiness stalls, inspect `k -n hotel-demo-app logs hr-wrk2`.
 In a **new CloudLab terminal**, enter the pod:
 
 ```bash
@@ -479,14 +474,6 @@ These tests write bookings. Start at **5 requests/second**:
 ```bash
 ../wrk2/wrk -D exp -t 1 -c 2 -T 10s -d 120s -L \
   -s /work/mixed-workload.lua "$app_ip" -R 5
-```
-
-Now try **50**, then leave the pod shell:
-
-```bash
-../wrk2/wrk -D exp -t 1 -c 2 -T 10s -d 120s -L \
-  -s /work/mixed-workload.lua "$app_ip" -R 50
-exit
 ```
 
 CPU/memory view in another **CloudLab terminal**:
