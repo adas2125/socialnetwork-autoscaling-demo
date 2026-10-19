@@ -1,3 +1,41 @@
+diff --git a/hotelReservation/helm-chart/hotelreservation/Chart.yaml b/hotelReservation/helm-chart/hotelreservation/Chart.yaml
+index d2c8ec3..39a9a5b 100644
+--- a/hotelReservation/helm-chart/hotelreservation/Chart.yaml
++++ b/hotelReservation/helm-chart/hotelreservation/Chart.yaml
+@@ -30,6 +30,7 @@ dependencies:
+     version: 0.1.0
+   - name: mongodb-reservation
+     version: 0.1.0
++    condition: global.reservationMongo.bundledEnabled
+   - name: mongodb-user
+     version: 0.1.0
+   - name: profile
+diff --git a/hotelReservation/helm-chart/hotelreservation/templates/configs/service-config.tpl b/hotelReservation/helm-chart/hotelreservation/templates/configs/service-config.tpl
+index 0285fc4..9d6b7f1 100644
+--- a/hotelReservation/helm-chart/hotelreservation/templates/configs/service-config.tpl
++++ b/hotelReservation/helm-chart/hotelreservation/templates/configs/service-config.tpl
+@@ -14,7 +14,7 @@
+     "RecommendPort": "8085",
+     "RecommendMongoAddress": "mongodb-recommendation-{{ include "hotel-reservation.fullname" . }}.{{ .Release.Namespace }}.svc.{{ .Values.global.serviceDnsDomain }}:27021",
+     "ReservePort": "8087",
+-    "ReserveMongoAddress": "mongodb-reservation-{{ include "hotel-reservation.fullname" . }}.{{ .Release.Namespace }}.svc.{{ .Values.global.serviceDnsDomain }}:27022",
++    "ReserveMongoAddress": {{ if .Values.global.reservationMongo.external }}{{ required "global.reservationMongo.address is required" .Values.global.reservationMongo.address | quote }}{{ else }}"mongodb-reservation-{{ include "hotel-reservation.fullname" . }}.{{ .Release.Namespace }}.svc.{{ .Values.global.serviceDnsDomain }}:27022"{{ end }},
+     "ReserveMemcAddress": {{ include "hotel-reservation.generateMemcAddr" (list . .Values.global.memcached.HACount "memcached-reserve" 11214)}},
+     "SearchPort": "8082",
+     "UserPort": "8086",
+diff --git a/hotelReservation/helm-chart/hotelreservation/values.yaml b/hotelReservation/helm-chart/hotelreservation/values.yaml
+index a80f966..0aecf4d 100644
+--- a/hotelReservation/helm-chart/hotelreservation/values.yaml
++++ b/hotelReservation/helm-chart/hotelreservation/values.yaml
+@@ -1,4 +1,8 @@
+ global:
++  reservationMongo:
++    external: false
++    address: ""
++    bundledEnabled: true
+   nameOverride: ""
+   fullnameOverride: ""
+   mainChart: hotelres
 diff --git a/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl b/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl
 index 52f499e..518efc1 100644
 --- a/socialNetwork/helm-chart/socialnetwork/templates/configs/other/service-config.tpl
