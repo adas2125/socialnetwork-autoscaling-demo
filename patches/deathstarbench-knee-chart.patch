@@ -1,0 +1,74 @@
+diff --git a/socialNetwork/helm-chart/socialnetwork/templates/_baseDeployment.tpl b/socialNetwork/helm-chart/socialnetwork/templates/_baseDeployment.tpl
+--- a/socialNetwork/helm-chart/socialnetwork/templates/_baseDeployment.tpl
++++ b/socialNetwork/helm-chart/socialnetwork/templates/_baseDeployment.tpl
+@@ -19,6 +19,10 @@
+       {{- if .Values.nodeName}}
+       nodeName: {{ .Values.nodeName }}
+       {{ end }}
++      {{- if .Values.nodeSelector }}
++      nodeSelector:
++        {{- toYaml .Values.nodeSelector | nindent 8 }}
++      {{- end }}
+       containers:
+       {{- with .Values.container }}
+       - name: "{{ .name }}"
+@@ -42,15 +46,15 @@
+         {{- if .args}}
+         args:
+         {{- range $arg := .args}}
+-        - {{ $arg }}
++        - {{ $arg | quote }}
+         {{- end -}}
+         {{- end }}
+         {{- if hasKey . "resources" }}  
+         resources:
+-          {{ toYaml .resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" .resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- else if hasKey $.Values.global "resources" }}           
+         resources:
+-          {{ toYaml $.Values.global.resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" $.Values.global.resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- end }}  
+         {{- if $.Values.configMaps }}        
+         volumeMounts: 
+diff --git a/socialNetwork/helm-chart/socialnetwork/templates/_baseNginxDeployment.tpl b/socialNetwork/helm-chart/socialnetwork/templates/_baseNginxDeployment.tpl
+--- a/socialNetwork/helm-chart/socialnetwork/templates/_baseNginxDeployment.tpl
++++ b/socialNetwork/helm-chart/socialnetwork/templates/_baseNginxDeployment.tpl
+@@ -44,10 +44,10 @@
+         {{- end }}
+         {{- if .resources }}  
+         resources:
+-          {{ toYaml .resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" .resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- else if hasKey $.Values.global "resources" }}           
+         resources:
+-          {{ toYaml $.Values.global.resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" $.Values.global.resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- end }}  
+         {{- if $.Values.configMaps }}        
+         volumeMounts: 
+@@ -74,10 +74,10 @@
+         {{- end -}}
+         {{- if .resources }}
+         resources:
+-          {{ toYaml .resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" .resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- else if hasKey $.Values.global "resources" }}
+         resources:
+-          {{ toYaml $.Values.global.resources | nindent 10 | trim }}
++          {{ include "socialnetwork.templates.resources" (dict "resources" $.Values.global.resources "disableLimits" $.Values.global.disableResourceLimits) | nindent 10 | trim }}
+         {{- end }}
+         {{- if .env }}
+         env:
+diff --git a/socialNetwork/helm-chart/socialnetwork/templates/_resources.tpl b/socialNetwork/helm-chart/socialnetwork/templates/_resources.tpl
+new file mode 100644
+--- /dev/null
++++ b/socialNetwork/helm-chart/socialnetwork/templates/_resources.tpl
+@@ -0,0 +1,7 @@
++{{- define "socialnetwork.templates.resources" -}}
++{{- $resources := .resources -}}
++{{- if .disableLimits -}}
++{{- $resources = omit $resources "limits" -}}
++{{- end -}}
++{{- toYaml $resources -}}
++{{- end -}}
