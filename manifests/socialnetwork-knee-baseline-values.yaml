@@ -1,18 +1,9 @@
-# Standalone experiment overrides; other settings use chart defaults.
-global:
-  disableResourceLimits: true
 compose-post-service:
   replicas: 2
   nodeSelector:
     kubernetes.io/hostname: i-02e0006573b905dca
 home-timeline-redis:
   container:
-    args:
-    - /social-network-microservices/config/redis.conf
-    - --save
-    - ''
-    - --appendonly
-    - 'no'
     imageVersion: '7.2'
 home-timeline-service:
   replicas: 2
@@ -23,22 +14,6 @@ nginx-thrift:
   replicas: 12
 post-storage-service:
   replicas: 5
-social-graph-redis:
-  container:
-    args:
-    - /social-network-microservices/config/redis.conf
-    - --save
-    - ''
-    - --appendonly
-    - 'no'
-user-timeline-redis:
-  container:
-    args:
-    - /social-network-microservices/config/redis.conf
-    - --save
-    - ''
-    - --appendonly
-    - 'no'
 text-service:
   nodeSelector:
     kubernetes.io/hostname: i-01a5857cf7598b7f8
