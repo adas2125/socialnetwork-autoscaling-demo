@@ -1,0 +1,767 @@
+2026-10-26T21:56:44Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+post-storage-mongodb-ddfbfc78b-gcztb      17m          400Mi           
+user-timeline-mongodb-554c574bc6-mq2j4    5m           167Mi           
+url-shorten-mongodb-96f7884d5-x6pgl       5m           434Mi           
+media-mongodb-b5547565d-wmbtg             5m           59Mi            
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     4m           165Mi           
+home-timeline-redis-857fff887f-x7b5k      3m           25Mi            
+user-timeline-redis-f668d6c96-h7jlx       2m           6Mi             
+social-graph-redis-77748f8bb7-q8cgj       2m           5Mi             
+sn-wrk2                                   2m           53Mi            
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+post-storage-service-7c698558f4-jqfhd     1m           2Mi             
+nginx-thrift-879985d9b-dr4fx              1m           10Mi            
+nginx-thrift-879985d9b-gwsr7              1m           16Mi            
+nginx-thrift-879985d9b-h4kmh              1m           17Mi            
+nginx-thrift-879985d9b-pqzpl              1m           16Mi            
+nginx-thrift-879985d9b-psvnx              1m           11Mi            
+nginx-thrift-879985d9b-px469              1m           16Mi            
+nginx-thrift-879985d9b-sngkf              1m           10Mi            
+nginx-thrift-879985d9b-wl957              1m           16Mi            
+nginx-thrift-879985d9b-xqfr6              1m           16Mi            
+nginx-thrift-879985d9b-zcbs7              1m           16Mi            
+compose-post-service-69fdd5495b-kdtxs     1m           6Mi             
+nginx-thrift-879985d9b-ckqks              1m           10Mi            
+post-storage-service-7c698558f4-2hz5w     1m           2Mi             
+post-storage-service-7c698558f4-4jnb8     1m           2Mi             
+post-storage-service-7c698558f4-bdxrw     1m           2Mi             
+nginx-thrift-879985d9b-dk9m7              1m           16Mi            
+post-storage-service-7c698558f4-jx69l     1m           2Mi             
+media-service-85c7c47c49-h9slv            1m           4Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+user-timeline-service-6565cf6ff7-bgfgc    1m           5Mi             
+social-graph-service-54d5984f7b-vdkvq     1m           9Mi             
+text-service-6ccfc5bcff-tv9sg             1m           5Mi             
+unique-id-service-9f9cf5879-5hvzr         1m           1Mi             
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+jaeger-565bdfcb56-8fddt                   1m           580Mi           
+url-shorten-service-64d77fb467-c7s5r      1m           8Mi             
+user-memcached-657bc7bd75-tdfck           1m           3Mi             
+user-mention-service-7fb968f778-jz58l     1m           3Mi             
+home-timeline-service-5bd8f87666-zj79c    1m           5Mi             
+user-service-75fb578f9d-hs5zf             1m           5Mi             
+home-timeline-service-5bd8f87666-gnsm5    1m           4Mi             
+compose-post-service-69fdd5495b-x2cn9     1m           6Mi             
+user-timeline-service-6565cf6ff7-4khxv    1m           6Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   156m         3%       2931Mi          18%         
+i-0188da2a87c4380bc   84m          4%       829Mi           10%         
+i-01a5857cf7598b7f8   70m          3%       845Mi           11%         
+i-02e0006573b905dca   92m          2%       954Mi           6%          
+i-0311cb8df75ea4f36   105m         2%       1042Mi          6%          
+i-063b793db694be24c   130m         6%       1596Mi          20%         
+i-091443c764376d8ba   138m         3%       3338Mi          21%         
+i-0c4d45abf9869abf0   278m         6%       1954Mi          12%         
+i-0f4a2ec2693d23bd5   104m         2%       1639Mi          10%         
+i-0fd9d8a829d0dfba9   236m         11%      1852Mi          49%         
+2026-10-26T21:56:50Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+post-storage-mongodb-ddfbfc78b-gcztb      17m          400Mi           
+user-timeline-mongodb-554c574bc6-mq2j4    5m           167Mi           
+url-shorten-mongodb-96f7884d5-x6pgl       5m           434Mi           
+media-mongodb-b5547565d-wmbtg             5m           59Mi            
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     4m           165Mi           
+home-timeline-redis-857fff887f-x7b5k      3m           25Mi            
+user-timeline-redis-f668d6c96-h7jlx       2m           6Mi             
+social-graph-redis-77748f8bb7-q8cgj       2m           5Mi             
+sn-wrk2                                   2m           53Mi            
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+post-storage-service-7c698558f4-jqfhd     1m           2Mi             
+nginx-thrift-879985d9b-dr4fx              1m           10Mi            
+nginx-thrift-879985d9b-gwsr7              1m           16Mi            
+nginx-thrift-879985d9b-h4kmh              1m           17Mi            
+nginx-thrift-879985d9b-pqzpl              1m           16Mi            
+nginx-thrift-879985d9b-psvnx              1m           11Mi            
+nginx-thrift-879985d9b-px469              1m           16Mi            
+nginx-thrift-879985d9b-sngkf              1m           10Mi            
+nginx-thrift-879985d9b-wl957              1m           16Mi            
+nginx-thrift-879985d9b-xqfr6              1m           16Mi            
+nginx-thrift-879985d9b-zcbs7              1m           16Mi            
+compose-post-service-69fdd5495b-kdtxs     1m           6Mi             
+nginx-thrift-879985d9b-ckqks              1m           10Mi            
+post-storage-service-7c698558f4-2hz5w     1m           2Mi             
+post-storage-service-7c698558f4-4jnb8     1m           2Mi             
+post-storage-service-7c698558f4-bdxrw     1m           2Mi             
+nginx-thrift-879985d9b-dk9m7              1m           16Mi            
+post-storage-service-7c698558f4-jx69l     1m           2Mi             
+media-service-85c7c47c49-h9slv            1m           4Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+user-timeline-service-6565cf6ff7-bgfgc    1m           5Mi             
+social-graph-service-54d5984f7b-vdkvq     1m           9Mi             
+text-service-6ccfc5bcff-tv9sg             1m           5Mi             
+unique-id-service-9f9cf5879-5hvzr         1m           1Mi             
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+jaeger-565bdfcb56-8fddt                   1m           580Mi           
+url-shorten-service-64d77fb467-c7s5r      1m           8Mi             
+user-memcached-657bc7bd75-tdfck           1m           3Mi             
+user-mention-service-7fb968f778-jz58l     1m           3Mi             
+home-timeline-service-5bd8f87666-zj79c    1m           5Mi             
+user-service-75fb578f9d-hs5zf             1m           5Mi             
+home-timeline-service-5bd8f87666-gnsm5    1m           4Mi             
+compose-post-service-69fdd5495b-x2cn9     1m           6Mi             
+user-timeline-service-6565cf6ff7-4khxv    1m           6Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   156m         3%       2931Mi          18%         
+i-0188da2a87c4380bc   84m          4%       829Mi           10%         
+i-01a5857cf7598b7f8   70m          3%       845Mi           11%         
+i-02e0006573b905dca   92m          2%       954Mi           6%          
+i-0311cb8df75ea4f36   105m         2%       1042Mi          6%          
+i-063b793db694be24c   130m         6%       1596Mi          20%         
+i-091443c764376d8ba   138m         3%       3338Mi          21%         
+i-0c4d45abf9869abf0   278m         6%       1954Mi          12%         
+i-0f4a2ec2693d23bd5   104m         2%       1639Mi          10%         
+i-0fd9d8a829d0dfba9   236m         11%      1852Mi          49%         
+2026-10-26T21:56:56Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+post-storage-mongodb-ddfbfc78b-gcztb      17m          400Mi           
+user-timeline-mongodb-554c574bc6-mq2j4    5m           167Mi           
+url-shorten-mongodb-96f7884d5-x6pgl       5m           434Mi           
+media-mongodb-b5547565d-wmbtg             5m           59Mi            
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     4m           165Mi           
+home-timeline-redis-857fff887f-x7b5k      3m           25Mi            
+user-timeline-redis-f668d6c96-h7jlx       2m           6Mi             
+social-graph-redis-77748f8bb7-q8cgj       2m           5Mi             
+sn-wrk2                                   2m           53Mi            
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+post-storage-service-7c698558f4-jqfhd     1m           2Mi             
+nginx-thrift-879985d9b-dr4fx              1m           10Mi            
+nginx-thrift-879985d9b-gwsr7              1m           16Mi            
+nginx-thrift-879985d9b-h4kmh              1m           17Mi            
+nginx-thrift-879985d9b-pqzpl              1m           16Mi            
+nginx-thrift-879985d9b-psvnx              1m           11Mi            
+nginx-thrift-879985d9b-px469              1m           16Mi            
+nginx-thrift-879985d9b-sngkf              1m           10Mi            
+nginx-thrift-879985d9b-wl957              1m           16Mi            
+nginx-thrift-879985d9b-xqfr6              1m           16Mi            
+nginx-thrift-879985d9b-zcbs7              1m           16Mi            
+compose-post-service-69fdd5495b-kdtxs     1m           6Mi             
+nginx-thrift-879985d9b-ckqks              1m           10Mi            
+post-storage-service-7c698558f4-2hz5w     1m           2Mi             
+post-storage-service-7c698558f4-4jnb8     1m           2Mi             
+post-storage-service-7c698558f4-bdxrw     1m           2Mi             
+nginx-thrift-879985d9b-dk9m7              1m           16Mi            
+post-storage-service-7c698558f4-jx69l     1m           2Mi             
+media-service-85c7c47c49-h9slv            1m           4Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+user-timeline-service-6565cf6ff7-bgfgc    1m           5Mi             
+social-graph-service-54d5984f7b-vdkvq     1m           9Mi             
+text-service-6ccfc5bcff-tv9sg             1m           5Mi             
+unique-id-service-9f9cf5879-5hvzr         1m           1Mi             
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+jaeger-565bdfcb56-8fddt                   1m           580Mi           
+url-shorten-service-64d77fb467-c7s5r      1m           8Mi             
+user-memcached-657bc7bd75-tdfck           1m           3Mi             
+user-mention-service-7fb968f778-jz58l     1m           3Mi             
+home-timeline-service-5bd8f87666-zj79c    1m           5Mi             
+user-service-75fb578f9d-hs5zf             1m           5Mi             
+home-timeline-service-5bd8f87666-gnsm5    1m           4Mi             
+compose-post-service-69fdd5495b-x2cn9     1m           6Mi             
+user-timeline-service-6565cf6ff7-4khxv    1m           6Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   156m         3%       2931Mi          18%         
+i-0188da2a87c4380bc   84m          4%       829Mi           10%         
+i-01a5857cf7598b7f8   70m          3%       845Mi           11%         
+i-02e0006573b905dca   92m          2%       954Mi           6%          
+i-0311cb8df75ea4f36   105m         2%       1042Mi          6%          
+i-063b793db694be24c   130m         6%       1596Mi          20%         
+i-091443c764376d8ba   138m         3%       3338Mi          21%         
+i-0c4d45abf9869abf0   278m         6%       1954Mi          12%         
+i-0f4a2ec2693d23bd5   104m         2%       1639Mi          10%         
+i-0fd9d8a829d0dfba9   236m         11%      1852Mi          49%         
+2026-10-26T21:57:02Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+text-service-6ccfc5bcff-tv9sg             821m         16Mi            
+user-timeline-mongodb-554c574bc6-mq2j4    239m         168Mi           
+user-memcached-657bc7bd75-tdfck           219m         3Mi             
+post-storage-mongodb-ddfbfc78b-gcztb      198m         401Mi           
+user-mention-service-7fb968f778-jz58l     184m         5Mi             
+social-graph-service-54d5984f7b-vdkvq     109m         9Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       100m         433Mi           
+user-timeline-redis-f668d6c96-h7jlx       69m          8Mi             
+unique-id-service-9f9cf5879-5hvzr         68m          2Mi             
+media-service-85c7c47c49-h9slv            62m          5Mi             
+social-graph-redis-77748f8bb7-q8cgj       57m          5Mi             
+nginx-thrift-879985d9b-px469              55m          17Mi            
+home-timeline-redis-857fff887f-x7b5k      55m          44Mi            
+post-storage-service-7c698558f4-jx69l     44m          3Mi             
+nginx-thrift-879985d9b-pqzpl              41m          17Mi            
+nginx-thrift-879985d9b-h4kmh              35m          18Mi            
+nginx-thrift-879985d9b-zcbs7              34m          17Mi            
+nginx-thrift-879985d9b-xqfr6              30m          17Mi            
+url-shorten-service-64d77fb467-c7s5r      27m          8Mi             
+post-storage-service-7c698558f4-jqfhd     27m          2Mi             
+compose-post-service-69fdd5495b-x2cn9     21m          8Mi             
+user-service-75fb578f9d-hs5zf             18m          5Mi             
+post-storage-service-7c698558f4-bdxrw     13m          2Mi             
+nginx-thrift-879985d9b-dk9m7              11m          17Mi            
+nginx-thrift-879985d9b-sngkf              7m           11Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           164Mi           
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+media-mongodb-b5547565d-wmbtg             4m           58Mi            
+sn-wrk2                                   2m           53Mi            
+compose-post-service-69fdd5495b-kdtxs     1m           6Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+nginx-thrift-879985d9b-psvnx              1m           11Mi            
+nginx-thrift-879985d9b-gwsr7              1m           16Mi            
+nginx-thrift-879985d9b-dr4fx              1m           10Mi            
+post-storage-service-7c698558f4-2hz5w     1m           3Mi             
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+nginx-thrift-879985d9b-ckqks              1m           10Mi            
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+nginx-thrift-879985d9b-wl957              1m           16Mi            
+user-timeline-service-6565cf6ff7-bgfgc    1m           5Mi             
+post-storage-service-7c698558f4-4jnb8     1m           2Mi             
+jaeger-565bdfcb56-8fddt                   1m           580Mi           
+home-timeline-service-5bd8f87666-zj79c    1m           5Mi             
+home-timeline-service-5bd8f87666-gnsm5    1m           4Mi             
+user-timeline-service-6565cf6ff7-4khxv    1m           6Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   368m         9%       2935Mi          18%         
+i-0188da2a87c4380bc   400m         20%      837Mi           10%         
+i-01a5857cf7598b7f8   314m         15%      848Mi           11%         
+i-02e0006573b905dca   1210m        30%      958Mi           6%          
+i-0311cb8df75ea4f36   516m         12%      1044Mi          6%          
+i-063b793db694be24c   794m         39%      1595Mi          20%         
+i-091443c764376d8ba   797m         19%      3339Mi          21%         
+i-0c4d45abf9869abf0   788m         19%      1957Mi          12%         
+i-0f4a2ec2693d23bd5   458m         11%      1664Mi          10%         
+i-0fd9d8a829d0dfba9   224m         11%      1854Mi          49%         
+2026-10-26T21:57:08Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+text-service-6ccfc5bcff-tv9sg             821m         16Mi            
+user-timeline-mongodb-554c574bc6-mq2j4    239m         168Mi           
+user-memcached-657bc7bd75-tdfck           219m         3Mi             
+post-storage-mongodb-ddfbfc78b-gcztb      198m         401Mi           
+user-mention-service-7fb968f778-jz58l     184m         5Mi             
+social-graph-service-54d5984f7b-vdkvq     109m         9Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       100m         433Mi           
+user-timeline-redis-f668d6c96-h7jlx       69m          8Mi             
+unique-id-service-9f9cf5879-5hvzr         68m          2Mi             
+media-service-85c7c47c49-h9slv            62m          5Mi             
+social-graph-redis-77748f8bb7-q8cgj       57m          5Mi             
+nginx-thrift-879985d9b-px469              55m          17Mi            
+home-timeline-redis-857fff887f-x7b5k      55m          44Mi            
+post-storage-service-7c698558f4-jx69l     44m          3Mi             
+nginx-thrift-879985d9b-pqzpl              41m          17Mi            
+nginx-thrift-879985d9b-h4kmh              35m          18Mi            
+nginx-thrift-879985d9b-zcbs7              34m          17Mi            
+nginx-thrift-879985d9b-xqfr6              30m          17Mi            
+url-shorten-service-64d77fb467-c7s5r      27m          8Mi             
+post-storage-service-7c698558f4-jqfhd     27m          2Mi             
+compose-post-service-69fdd5495b-x2cn9     21m          8Mi             
+user-service-75fb578f9d-hs5zf             18m          5Mi             
+post-storage-service-7c698558f4-bdxrw     13m          2Mi             
+nginx-thrift-879985d9b-dk9m7              11m          17Mi            
+nginx-thrift-879985d9b-sngkf              7m           11Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           164Mi           
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+media-mongodb-b5547565d-wmbtg             4m           58Mi            
+sn-wrk2                                   2m           53Mi            
+compose-post-service-69fdd5495b-kdtxs     1m           6Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+nginx-thrift-879985d9b-psvnx              1m           11Mi            
+nginx-thrift-879985d9b-gwsr7              1m           16Mi            
+nginx-thrift-879985d9b-dr4fx              1m           10Mi            
+post-storage-service-7c698558f4-2hz5w     1m           3Mi             
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+nginx-thrift-879985d9b-ckqks              1m           10Mi            
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+nginx-thrift-879985d9b-wl957              1m           16Mi            
+user-timeline-service-6565cf6ff7-bgfgc    1m           5Mi             
+post-storage-service-7c698558f4-4jnb8     1m           2Mi             
+jaeger-565bdfcb56-8fddt                   1m           580Mi           
+home-timeline-service-5bd8f87666-zj79c    1m           5Mi             
+home-timeline-service-5bd8f87666-gnsm5    1m           4Mi             
+user-timeline-service-6565cf6ff7-4khxv    1m           6Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   368m         9%       2935Mi          18%         
+i-0188da2a87c4380bc   400m         20%      837Mi           10%         
+i-01a5857cf7598b7f8   314m         15%      848Mi           11%         
+i-02e0006573b905dca   1210m        30%      958Mi           6%          
+i-0311cb8df75ea4f36   516m         12%      1044Mi          6%          
+i-063b793db694be24c   794m         39%      1595Mi          20%         
+i-091443c764376d8ba   797m         19%      3339Mi          21%         
+i-0c4d45abf9869abf0   788m         19%      1957Mi          12%         
+i-0f4a2ec2693d23bd5   458m         11%      1664Mi          10%         
+i-0fd9d8a829d0dfba9   224m         11%      1854Mi          49%         
+2026-10-26T21:57:14Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+text-service-6ccfc5bcff-tv9sg             1397m        13Mi            
+compose-post-service-69fdd5495b-x2cn9     1310m        14Mi            
+compose-post-service-69fdd5495b-kdtxs     983m         13Mi            
+url-shorten-service-64d77fb467-c7s5r      725m         11Mi            
+url-shorten-mongodb-96f7884d5-x6pgl       630m         434Mi           
+user-mention-service-7fb968f778-jz58l     614m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    556m         169Mi           
+post-storage-mongodb-ddfbfc78b-gcztb      437m         402Mi           
+sn-wrk2                                   405m         66Mi            
+home-timeline-redis-857fff887f-x7b5k      336m         150Mi           
+home-timeline-service-5bd8f87666-gnsm5    332m         5Mi             
+social-graph-service-54d5984f7b-vdkvq     271m         9Mi             
+home-timeline-service-5bd8f87666-zj79c    229m         6Mi             
+user-memcached-657bc7bd75-tdfck           219m         3Mi             
+user-timeline-service-6565cf6ff7-4khxv    201m         6Mi             
+user-timeline-service-6565cf6ff7-bgfgc    159m         6Mi             
+media-service-85c7c47c49-h9slv            152m         4Mi             
+unique-id-service-9f9cf5879-5hvzr         145m         2Mi             
+user-service-75fb578f9d-hs5zf             139m         5Mi             
+social-graph-redis-77748f8bb7-q8cgj       123m         4Mi             
+user-timeline-redis-f668d6c96-h7jlx       116m         9Mi             
+nginx-thrift-879985d9b-pqzpl              106m         17Mi            
+post-storage-service-7c698558f4-2hz5w     98m          3Mi             
+post-storage-service-7c698558f4-bdxrw     89m          2Mi             
+jaeger-565bdfcb56-8fddt                   88m          580Mi           
+nginx-thrift-879985d9b-zcbs7              78m          17Mi            
+nginx-thrift-879985d9b-xqfr6              78m          17Mi            
+post-storage-service-7c698558f4-jx69l     68m          2Mi             
+post-storage-service-7c698558f4-jqfhd     65m          2Mi             
+nginx-thrift-879985d9b-ckqks              65m          10Mi            
+nginx-thrift-879985d9b-sngkf              59m          11Mi            
+nginx-thrift-879985d9b-wl957              56m          17Mi            
+nginx-thrift-879985d9b-px469              55m          17Mi            
+nginx-thrift-879985d9b-dk9m7              54m          17Mi            
+nginx-thrift-879985d9b-psvnx              54m          11Mi            
+nginx-thrift-879985d9b-gwsr7              53m          17Mi            
+post-storage-service-7c698558f4-4jnb8     52m          2Mi             
+nginx-thrift-879985d9b-dr4fx              43m          10Mi            
+nginx-thrift-879985d9b-h4kmh              35m          18Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           164Mi           
+user-mongodb-c5bd4f747-m2gcf              5m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1472m        36%      2935Mi          18%         
+i-0188da2a87c4380bc   713m         35%      839Mi           10%         
+i-01a5857cf7598b7f8   1605m        80%      847Mi           11%         
+i-02e0006573b905dca   2943m        73%      956Mi           6%          
+i-0311cb8df75ea4f36   1233m        30%      1042Mi          6%          
+i-063b793db694be24c   1247m        62%      1596Mi          20%         
+i-091443c764376d8ba   1702m        42%      3337Mi          21%         
+i-0c4d45abf9869abf0   2662m        66%      1954Mi          12%         
+i-0f4a2ec2693d23bd5   720m         18%      1787Mi          11%         
+i-0fd9d8a829d0dfba9   222m         11%      1852Mi          49%         
+2026-10-26T21:57:20Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+text-service-6ccfc5bcff-tv9sg             1397m        13Mi            
+compose-post-service-69fdd5495b-x2cn9     1310m        14Mi            
+compose-post-service-69fdd5495b-kdtxs     983m         13Mi            
+url-shorten-service-64d77fb467-c7s5r      725m         11Mi            
+url-shorten-mongodb-96f7884d5-x6pgl       630m         434Mi           
+user-mention-service-7fb968f778-jz58l     614m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    556m         169Mi           
+post-storage-mongodb-ddfbfc78b-gcztb      437m         402Mi           
+sn-wrk2                                   405m         66Mi            
+home-timeline-redis-857fff887f-x7b5k      336m         150Mi           
+home-timeline-service-5bd8f87666-gnsm5    332m         5Mi             
+social-graph-service-54d5984f7b-vdkvq     271m         9Mi             
+home-timeline-service-5bd8f87666-zj79c    229m         6Mi             
+user-memcached-657bc7bd75-tdfck           219m         3Mi             
+user-timeline-service-6565cf6ff7-4khxv    201m         6Mi             
+user-timeline-service-6565cf6ff7-bgfgc    159m         6Mi             
+media-service-85c7c47c49-h9slv            152m         4Mi             
+unique-id-service-9f9cf5879-5hvzr         145m         2Mi             
+user-service-75fb578f9d-hs5zf             139m         5Mi             
+social-graph-redis-77748f8bb7-q8cgj       123m         4Mi             
+user-timeline-redis-f668d6c96-h7jlx       116m         9Mi             
+nginx-thrift-879985d9b-pqzpl              106m         17Mi            
+post-storage-service-7c698558f4-2hz5w     98m          3Mi             
+post-storage-service-7c698558f4-bdxrw     89m          2Mi             
+jaeger-565bdfcb56-8fddt                   88m          580Mi           
+nginx-thrift-879985d9b-zcbs7              78m          17Mi            
+nginx-thrift-879985d9b-xqfr6              78m          17Mi            
+post-storage-service-7c698558f4-jx69l     68m          2Mi             
+post-storage-service-7c698558f4-jqfhd     65m          2Mi             
+nginx-thrift-879985d9b-ckqks              65m          10Mi            
+nginx-thrift-879985d9b-sngkf              59m          11Mi            
+nginx-thrift-879985d9b-wl957              56m          17Mi            
+nginx-thrift-879985d9b-px469              55m          17Mi            
+nginx-thrift-879985d9b-dk9m7              54m          17Mi            
+nginx-thrift-879985d9b-psvnx              54m          11Mi            
+nginx-thrift-879985d9b-gwsr7              53m          17Mi            
+post-storage-service-7c698558f4-4jnb8     52m          2Mi             
+nginx-thrift-879985d9b-dr4fx              43m          10Mi            
+nginx-thrift-879985d9b-h4kmh              35m          18Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           164Mi           
+user-mongodb-c5bd4f747-m2gcf              5m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1472m        36%      2935Mi          18%         
+i-0188da2a87c4380bc   713m         35%      839Mi           10%         
+i-01a5857cf7598b7f8   1605m        80%      847Mi           11%         
+i-02e0006573b905dca   2943m        73%      956Mi           6%          
+i-0311cb8df75ea4f36   1233m        30%      1042Mi          6%          
+i-063b793db694be24c   1247m        62%      1596Mi          20%         
+i-091443c764376d8ba   1702m        42%      3337Mi          21%         
+i-0c4d45abf9869abf0   2662m        66%      1954Mi          12%         
+i-0f4a2ec2693d23bd5   720m         18%      1787Mi          11%         
+i-0fd9d8a829d0dfba9   222m         11%      1852Mi          49%         
+2026-10-26T21:57:27Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+text-service-6ccfc5bcff-tv9sg             1397m        13Mi            
+compose-post-service-69fdd5495b-x2cn9     1310m        14Mi            
+compose-post-service-69fdd5495b-kdtxs     983m         13Mi            
+url-shorten-service-64d77fb467-c7s5r      725m         11Mi            
+url-shorten-mongodb-96f7884d5-x6pgl       630m         434Mi           
+user-mention-service-7fb968f778-jz58l     614m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    556m         169Mi           
+post-storage-mongodb-ddfbfc78b-gcztb      437m         402Mi           
+sn-wrk2                                   405m         66Mi            
+home-timeline-redis-857fff887f-x7b5k      336m         150Mi           
+home-timeline-service-5bd8f87666-gnsm5    332m         5Mi             
+social-graph-service-54d5984f7b-vdkvq     271m         9Mi             
+home-timeline-service-5bd8f87666-zj79c    229m         6Mi             
+user-memcached-657bc7bd75-tdfck           219m         3Mi             
+user-timeline-service-6565cf6ff7-4khxv    201m         6Mi             
+user-timeline-service-6565cf6ff7-bgfgc    159m         6Mi             
+media-service-85c7c47c49-h9slv            152m         4Mi             
+unique-id-service-9f9cf5879-5hvzr         145m         2Mi             
+user-service-75fb578f9d-hs5zf             139m         5Mi             
+social-graph-redis-77748f8bb7-q8cgj       123m         4Mi             
+user-timeline-redis-f668d6c96-h7jlx       116m         9Mi             
+nginx-thrift-879985d9b-pqzpl              106m         17Mi            
+post-storage-service-7c698558f4-2hz5w     98m          3Mi             
+post-storage-service-7c698558f4-bdxrw     89m          2Mi             
+jaeger-565bdfcb56-8fddt                   88m          580Mi           
+nginx-thrift-879985d9b-zcbs7              78m          17Mi            
+nginx-thrift-879985d9b-xqfr6              78m          17Mi            
+post-storage-service-7c698558f4-jx69l     68m          2Mi             
+post-storage-service-7c698558f4-jqfhd     65m          2Mi             
+nginx-thrift-879985d9b-ckqks              65m          10Mi            
+nginx-thrift-879985d9b-sngkf              59m          11Mi            
+nginx-thrift-879985d9b-wl957              56m          17Mi            
+nginx-thrift-879985d9b-px469              55m          17Mi            
+nginx-thrift-879985d9b-dk9m7              54m          17Mi            
+nginx-thrift-879985d9b-psvnx              54m          11Mi            
+nginx-thrift-879985d9b-gwsr7              53m          17Mi            
+post-storage-service-7c698558f4-4jnb8     52m          2Mi             
+nginx-thrift-879985d9b-dr4fx              43m          10Mi            
+nginx-thrift-879985d9b-h4kmh              35m          18Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           164Mi           
+user-mongodb-c5bd4f747-m2gcf              5m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1472m        36%      2935Mi          18%         
+i-0188da2a87c4380bc   713m         35%      839Mi           10%         
+i-01a5857cf7598b7f8   1605m        80%      847Mi           11%         
+i-02e0006573b905dca   2943m        73%      956Mi           6%          
+i-0311cb8df75ea4f36   1233m        30%      1042Mi          6%          
+i-063b793db694be24c   1247m        62%      1596Mi          20%         
+i-091443c764376d8ba   1702m        42%      3337Mi          21%         
+i-0c4d45abf9869abf0   2662m        66%      1954Mi          12%         
+i-0f4a2ec2693d23bd5   720m         18%      1787Mi          11%         
+i-0fd9d8a829d0dfba9   222m         11%      1852Mi          49%         
+2026-10-26T21:57:33Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+compose-post-service-69fdd5495b-x2cn9     1388m        15Mi            
+text-service-6ccfc5bcff-tv9sg             1362m        15Mi            
+compose-post-service-69fdd5495b-kdtxs     1313m        16Mi            
+url-shorten-service-64d77fb467-c7s5r      717m         9Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       636m         434Mi           
+user-timeline-mongodb-554c574bc6-mq2j4    593m         169Mi           
+user-mention-service-7fb968f778-jz58l     588m         4Mi             
+sn-wrk2                                   504m         67Mi            
+post-storage-mongodb-ddfbfc78b-gcztb      442m         403Mi           
+user-memcached-657bc7bd75-tdfck           396m         4Mi             
+home-timeline-service-5bd8f87666-gnsm5    388m         6Mi             
+home-timeline-redis-857fff887f-x7b5k      355m         248Mi           
+home-timeline-service-5bd8f87666-zj79c    286m         6Mi             
+social-graph-service-54d5984f7b-vdkvq     275m         10Mi            
+user-timeline-service-6565cf6ff7-4khxv    270m         8Mi             
+user-timeline-service-6565cf6ff7-bgfgc    213m         7Mi             
+jaeger-565bdfcb56-8fddt                   176m         703Mi           
+media-service-85c7c47c49-h9slv            154m         6Mi             
+unique-id-service-9f9cf5879-5hvzr         149m         2Mi             
+user-service-75fb578f9d-hs5zf             142m         5Mi             
+user-timeline-redis-f668d6c96-h7jlx       136m         10Mi            
+social-graph-redis-77748f8bb7-q8cgj       125m         5Mi             
+nginx-thrift-879985d9b-pqzpl              106m         17Mi            
+post-storage-service-7c698558f4-2hz5w     98m          3Mi             
+nginx-thrift-879985d9b-px469              92m          17Mi            
+post-storage-service-7c698558f4-bdxrw     87m          3Mi             
+nginx-thrift-879985d9b-h4kmh              87m          18Mi            
+post-storage-service-7c698558f4-jx69l     80m          3Mi             
+nginx-thrift-879985d9b-xqfr6              80m          17Mi            
+nginx-thrift-879985d9b-zcbs7              77m          17Mi            
+post-storage-service-7c698558f4-4jnb8     77m          2Mi             
+post-storage-service-7c698558f4-jqfhd     74m          2Mi             
+nginx-thrift-879985d9b-ckqks              71m          10Mi            
+nginx-thrift-879985d9b-gwsr7              66m          17Mi            
+nginx-thrift-879985d9b-sngkf              61m          11Mi            
+nginx-thrift-879985d9b-dk9m7              60m          17Mi            
+nginx-thrift-879985d9b-psvnx              59m          11Mi            
+nginx-thrift-879985d9b-dr4fx              59m          10Mi            
+nginx-thrift-879985d9b-wl957              56m          17Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     6m           165Mi           
+media-mongodb-b5547565d-wmbtg             5m           59Mi            
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1399m        34%      2946Mi          18%         
+i-0188da2a87c4380bc   729m         36%      838Mi           10%         
+i-01a5857cf7598b7f8   1546m        77%      851Mi           11%         
+i-02e0006573b905dca   3123m        78%      961Mi           6%          
+i-0311cb8df75ea4f36   1316m        32%      1045Mi          6%          
+i-063b793db694be24c   1426m        71%      1598Mi          20%         
+i-091443c764376d8ba   1838m        45%      3458Mi          22%         
+i-0c4d45abf9869abf0   2435m        60%      1957Mi          12%         
+i-0f4a2ec2693d23bd5   859m         21%      1855Mi          11%         
+i-0fd9d8a829d0dfba9   225m         11%      1852Mi          49%         
+2026-10-26T21:57:39Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+compose-post-service-69fdd5495b-x2cn9     1388m        15Mi            
+text-service-6ccfc5bcff-tv9sg             1362m        15Mi            
+compose-post-service-69fdd5495b-kdtxs     1313m        16Mi            
+url-shorten-service-64d77fb467-c7s5r      717m         9Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       636m         434Mi           
+user-timeline-mongodb-554c574bc6-mq2j4    593m         169Mi           
+user-mention-service-7fb968f778-jz58l     588m         4Mi             
+sn-wrk2                                   504m         67Mi            
+post-storage-mongodb-ddfbfc78b-gcztb      442m         403Mi           
+user-memcached-657bc7bd75-tdfck           396m         4Mi             
+home-timeline-service-5bd8f87666-gnsm5    388m         6Mi             
+home-timeline-redis-857fff887f-x7b5k      355m         248Mi           
+home-timeline-service-5bd8f87666-zj79c    286m         6Mi             
+social-graph-service-54d5984f7b-vdkvq     275m         10Mi            
+user-timeline-service-6565cf6ff7-4khxv    270m         8Mi             
+user-timeline-service-6565cf6ff7-bgfgc    213m         7Mi             
+jaeger-565bdfcb56-8fddt                   176m         703Mi           
+media-service-85c7c47c49-h9slv            154m         6Mi             
+unique-id-service-9f9cf5879-5hvzr         149m         2Mi             
+user-service-75fb578f9d-hs5zf             142m         5Mi             
+user-timeline-redis-f668d6c96-h7jlx       136m         10Mi            
+social-graph-redis-77748f8bb7-q8cgj       125m         5Mi             
+nginx-thrift-879985d9b-pqzpl              106m         17Mi            
+post-storage-service-7c698558f4-2hz5w     98m          3Mi             
+nginx-thrift-879985d9b-px469              92m          17Mi            
+post-storage-service-7c698558f4-bdxrw     87m          3Mi             
+nginx-thrift-879985d9b-h4kmh              87m          18Mi            
+post-storage-service-7c698558f4-jx69l     80m          3Mi             
+nginx-thrift-879985d9b-xqfr6              80m          17Mi            
+nginx-thrift-879985d9b-zcbs7              77m          17Mi            
+post-storage-service-7c698558f4-4jnb8     77m          2Mi             
+post-storage-service-7c698558f4-jqfhd     74m          2Mi             
+nginx-thrift-879985d9b-ckqks              71m          10Mi            
+nginx-thrift-879985d9b-gwsr7              66m          17Mi            
+nginx-thrift-879985d9b-sngkf              61m          11Mi            
+nginx-thrift-879985d9b-dk9m7              60m          17Mi            
+nginx-thrift-879985d9b-psvnx              59m          11Mi            
+nginx-thrift-879985d9b-dr4fx              59m          10Mi            
+nginx-thrift-879985d9b-wl957              56m          17Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     6m           165Mi           
+media-mongodb-b5547565d-wmbtg             5m           59Mi            
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1399m        34%      2946Mi          18%         
+i-0188da2a87c4380bc   729m         36%      838Mi           10%         
+i-01a5857cf7598b7f8   1546m        77%      851Mi           11%         
+i-02e0006573b905dca   3123m        78%      961Mi           6%          
+i-0311cb8df75ea4f36   1316m        32%      1045Mi          6%          
+i-063b793db694be24c   1426m        71%      1598Mi          20%         
+i-091443c764376d8ba   1838m        45%      3458Mi          22%         
+i-0c4d45abf9869abf0   2435m        60%      1957Mi          12%         
+i-0f4a2ec2693d23bd5   859m         21%      1855Mi          11%         
+i-0fd9d8a829d0dfba9   225m         11%      1852Mi          49%         
+2026-10-26T21:57:45Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+compose-post-service-69fdd5495b-x2cn9     1388m        15Mi            
+text-service-6ccfc5bcff-tv9sg             1362m        15Mi            
+compose-post-service-69fdd5495b-kdtxs     1340m        14Mi            
+url-shorten-service-64d77fb467-c7s5r      750m         8Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       636m         434Mi           
+user-mention-service-7fb968f778-jz58l     625m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    593m         169Mi           
+sn-wrk2                                   519m         67Mi            
+post-storage-mongodb-ddfbfc78b-gcztb      482m         403Mi           
+user-memcached-657bc7bd75-tdfck           396m         3Mi             
+home-timeline-service-5bd8f87666-gnsm5    370m         5Mi             
+home-timeline-redis-857fff887f-x7b5k      362m         356Mi           
+home-timeline-service-5bd8f87666-zj79c    336m         6Mi             
+social-graph-service-54d5984f7b-vdkvq     281m         9Mi             
+user-timeline-service-6565cf6ff7-4khxv    260m         7Mi             
+user-timeline-service-6565cf6ff7-bgfgc    251m         6Mi             
+media-service-85c7c47c49-h9slv            158m         5Mi             
+unique-id-service-9f9cf5879-5hvzr         151m         2Mi             
+user-service-75fb578f9d-hs5zf             145m         5Mi             
+user-timeline-redis-f668d6c96-h7jlx       130m         11Mi            
+social-graph-redis-77748f8bb7-q8cgj       124m         5Mi             
+nginx-thrift-879985d9b-pqzpl              108m         17Mi            
+jaeger-565bdfcb56-8fddt                   104m         704Mi           
+post-storage-service-7c698558f4-jx69l     98m          2Mi             
+nginx-thrift-879985d9b-px469              93m          17Mi            
+nginx-thrift-879985d9b-h4kmh              90m          18Mi            
+post-storage-service-7c698558f4-bdxrw     90m          2Mi             
+nginx-thrift-879985d9b-zcbs7              84m          17Mi            
+nginx-thrift-879985d9b-xqfr6              80m          17Mi            
+post-storage-service-7c698558f4-jqfhd     74m          2Mi             
+post-storage-service-7c698558f4-2hz5w     74m          2Mi             
+nginx-thrift-879985d9b-ckqks              72m          10Mi            
+post-storage-service-7c698558f4-4jnb8     71m          3Mi             
+nginx-thrift-879985d9b-gwsr7              70m          17Mi            
+nginx-thrift-879985d9b-wl957              68m          17Mi            
+nginx-thrift-879985d9b-sngkf              61m          11Mi            
+nginx-thrift-879985d9b-psvnx              61m          11Mi            
+nginx-thrift-879985d9b-dr4fx              60m          10Mi            
+nginx-thrift-879985d9b-dk9m7              56m          17Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           165Mi           
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1500m        37%      2933Mi          18%         
+i-0188da2a87c4380bc   750m         37%      840Mi           10%         
+i-01a5857cf7598b7f8   1628m        81%      847Mi           11%         
+i-02e0006573b905dca   3094m        77%      960Mi           6%          
+i-0311cb8df75ea4f36   1235m        30%      1045Mi          6%          
+i-063b793db694be24c   1215m        60%      1593Mi          20%         
+i-091443c764376d8ba   1870m        46%      3459Mi          22%         
+i-0c4d45abf9869abf0   2808m        70%      1958Mi          12%         
+i-0f4a2ec2693d23bd5   768m         19%      1977Mi          12%         
+i-0fd9d8a829d0dfba9   209m         10%      1853Mi          49%         
+2026-10-26T21:57:51Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+compose-post-service-69fdd5495b-x2cn9     1388m        15Mi            
+text-service-6ccfc5bcff-tv9sg             1362m        15Mi            
+compose-post-service-69fdd5495b-kdtxs     1340m        14Mi            
+url-shorten-service-64d77fb467-c7s5r      750m         8Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       636m         434Mi           
+user-mention-service-7fb968f778-jz58l     625m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    593m         169Mi           
+sn-wrk2                                   519m         67Mi            
+post-storage-mongodb-ddfbfc78b-gcztb      482m         403Mi           
+user-memcached-657bc7bd75-tdfck           396m         3Mi             
+home-timeline-service-5bd8f87666-gnsm5    370m         5Mi             
+home-timeline-redis-857fff887f-x7b5k      362m         356Mi           
+home-timeline-service-5bd8f87666-zj79c    336m         6Mi             
+social-graph-service-54d5984f7b-vdkvq     281m         9Mi             
+user-timeline-service-6565cf6ff7-4khxv    260m         7Mi             
+user-timeline-service-6565cf6ff7-bgfgc    251m         6Mi             
+media-service-85c7c47c49-h9slv            158m         5Mi             
+unique-id-service-9f9cf5879-5hvzr         151m         2Mi             
+user-service-75fb578f9d-hs5zf             145m         5Mi             
+user-timeline-redis-f668d6c96-h7jlx       130m         11Mi            
+social-graph-redis-77748f8bb7-q8cgj       124m         5Mi             
+nginx-thrift-879985d9b-pqzpl              108m         17Mi            
+jaeger-565bdfcb56-8fddt                   104m         704Mi           
+post-storage-service-7c698558f4-jx69l     98m          2Mi             
+nginx-thrift-879985d9b-px469              93m          17Mi            
+nginx-thrift-879985d9b-h4kmh              90m          18Mi            
+post-storage-service-7c698558f4-bdxrw     90m          2Mi             
+nginx-thrift-879985d9b-zcbs7              84m          17Mi            
+nginx-thrift-879985d9b-xqfr6              80m          17Mi            
+post-storage-service-7c698558f4-jqfhd     74m          2Mi             
+post-storage-service-7c698558f4-2hz5w     74m          2Mi             
+nginx-thrift-879985d9b-ckqks              72m          10Mi            
+post-storage-service-7c698558f4-4jnb8     71m          3Mi             
+nginx-thrift-879985d9b-gwsr7              70m          17Mi            
+nginx-thrift-879985d9b-wl957              68m          17Mi            
+nginx-thrift-879985d9b-sngkf              61m          11Mi            
+nginx-thrift-879985d9b-psvnx              61m          11Mi            
+nginx-thrift-879985d9b-dr4fx              60m          10Mi            
+nginx-thrift-879985d9b-dk9m7              56m          17Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           165Mi           
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1500m        37%      2933Mi          18%         
+i-0188da2a87c4380bc   750m         37%      840Mi           10%         
+i-01a5857cf7598b7f8   1628m        81%      847Mi           11%         
+i-02e0006573b905dca   3094m        77%      960Mi           6%          
+i-0311cb8df75ea4f36   1235m        30%      1045Mi          6%          
+i-063b793db694be24c   1215m        60%      1593Mi          20%         
+i-091443c764376d8ba   1870m        46%      3459Mi          22%         
+i-0c4d45abf9869abf0   2808m        70%      1958Mi          12%         
+i-0f4a2ec2693d23bd5   768m         19%      1977Mi          12%         
+i-0fd9d8a829d0dfba9   209m         10%      1853Mi          49%         
+2026-10-26T21:57:57Z
+NAME                                      CPU(cores)   MEMORY(bytes)   
+compose-post-service-69fdd5495b-x2cn9     1388m        15Mi            
+text-service-6ccfc5bcff-tv9sg             1362m        15Mi            
+compose-post-service-69fdd5495b-kdtxs     1340m        14Mi            
+url-shorten-service-64d77fb467-c7s5r      750m         8Mi             
+url-shorten-mongodb-96f7884d5-x6pgl       636m         434Mi           
+user-mention-service-7fb968f778-jz58l     625m         5Mi             
+user-timeline-mongodb-554c574bc6-mq2j4    593m         169Mi           
+sn-wrk2                                   519m         67Mi            
+post-storage-mongodb-ddfbfc78b-gcztb      482m         403Mi           
+user-memcached-657bc7bd75-tdfck           396m         3Mi             
+home-timeline-service-5bd8f87666-gnsm5    370m         5Mi             
+home-timeline-redis-857fff887f-x7b5k      362m         356Mi           
+home-timeline-service-5bd8f87666-zj79c    336m         6Mi             
+social-graph-service-54d5984f7b-vdkvq     281m         9Mi             
+user-timeline-service-6565cf6ff7-4khxv    260m         7Mi             
+user-timeline-service-6565cf6ff7-bgfgc    251m         6Mi             
+media-service-85c7c47c49-h9slv            158m         5Mi             
+unique-id-service-9f9cf5879-5hvzr         151m         2Mi             
+user-service-75fb578f9d-hs5zf             145m         5Mi             
+user-timeline-redis-f668d6c96-h7jlx       130m         11Mi            
+social-graph-redis-77748f8bb7-q8cgj       124m         5Mi             
+nginx-thrift-879985d9b-pqzpl              108m         17Mi            
+jaeger-565bdfcb56-8fddt                   104m         704Mi           
+post-storage-service-7c698558f4-jx69l     98m          2Mi             
+nginx-thrift-879985d9b-px469              93m          17Mi            
+nginx-thrift-879985d9b-h4kmh              90m          18Mi            
+post-storage-service-7c698558f4-bdxrw     90m          2Mi             
+nginx-thrift-879985d9b-zcbs7              84m          17Mi            
+nginx-thrift-879985d9b-xqfr6              80m          17Mi            
+post-storage-service-7c698558f4-jqfhd     74m          2Mi             
+post-storage-service-7c698558f4-2hz5w     74m          2Mi             
+nginx-thrift-879985d9b-ckqks              72m          10Mi            
+post-storage-service-7c698558f4-4jnb8     71m          3Mi             
+nginx-thrift-879985d9b-gwsr7              70m          17Mi            
+nginx-thrift-879985d9b-wl957              68m          17Mi            
+nginx-thrift-879985d9b-sngkf              61m          11Mi            
+nginx-thrift-879985d9b-psvnx              61m          11Mi            
+nginx-thrift-879985d9b-dr4fx              60m          10Mi            
+nginx-thrift-879985d9b-dk9m7              56m          17Mi            
+media-mongodb-b5547565d-wmbtg             6m           58Mi            
+social-graph-mongodb-55dd86f9fd-4c4f2     5m           165Mi           
+user-mongodb-c5bd4f747-m2gcf              4m           67Mi            
+url-shorten-memcached-759dc846b5-lt5g8    1m           1Mi             
+post-storage-memcached-6f7b6c4cfc-wkfkp   1m           1Mi             
+media-memcached-7574dcf667-kczfv          1m           1Mi             
+media-frontend-9678f997-2c5jp             0m           14Mi            
+NAME                  CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+i-00ecc4734204a6c6e   1070m        26%      3052Mi          19%         
+i-0188da2a87c4380bc   389m         19%      828Mi           10%         
+i-01a5857cf7598b7f8   1212m        60%      844Mi           11%         
+i-02e0006573b905dca   1623m        40%      961Mi           6%          
+i-0311cb8df75ea4f36   695m         17%      1044Mi          6%          
+i-063b793db694be24c   710m         35%      1597Mi          20%         
+i-091443c764376d8ba   1254m        31%      3584Mi          22%         
+i-0c4d45abf9869abf0   1599m        39%      1959Mi          12%         
+i-0f4a2ec2693d23bd5   590m         14%      2011Mi          12%         
+i-0fd9d8a829d0dfba9   209m         10%      1854Mi          49%         
